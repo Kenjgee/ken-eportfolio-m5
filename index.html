@@ -87,20 +87,47 @@
           </p>
           <div class="modal__languages">
             <figure class="modal__language">
-              <img class="modal__language--img" src="https://logodownload.org/wp-content/uploads/2016/10/html5-logo-10.png">
+              <img class="modal__language--img" src="https://i.pinimg.com/736x/c5/73/ff/c573ff5552d6da9a1d28ec4e27cd1445.jpg">
+              <span class="language__name">HTML</span>
             </figure>
             <figure class="modal__language">
               <img class="modal__language--img" src="https://freepnglogo.com/images/all_img/css-1667.png">
+              <span class="language__name">CSS</span>
             </figure>
             <figure class="modal__language">
-              <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original">
+              <img class="modal__language--img" src=https://www.freepng.com/uploads/images/202512/avascript-logo-vector-png_1020x.jpg>
+              <span class="language__name">JavaScript</span>
             </figure>
             <figure class="modal__language">
               <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original">
+              <span class="language__name">React</span>
             </figure>
           </div>
         </div>        
-        <div class="modal__half modal__contact">Let's havr a chat!</div>        
+        <div class="modal__half modal__contact">
+          <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
+          <h4 class="modal__sub-title modal__sub-title--contact">I am currently open to new opportunities, and would love to hear from you.</h4>
+          <form id="contact_form" action="">
+            <div class="form__item">
+              <label class="form__item--label">Name</label>
+              <input class="input" name="user_name" type="text" required></input>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Email</label>
+              <input class="input" name="user_email" type="email" required></input>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Message</label>
+              <textarea class="input" name="message" type="text" required></textarea>
+            </div>
+            <button id="contact__submit" class="form__submit">
+              Send it my way
+            </button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fa-solid fa-spinner"></i>
+          </div>
+        </div>        
       </div>
   </section>
   <section id="projects">
