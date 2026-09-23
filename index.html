@@ -8,6 +8,17 @@
   <title>Ken Gaudioso</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/354a273861.js" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "WCQQdp3yTURXNPzp4",
+      });
+   })();
+</script>
 </head>
 
 <body>
@@ -31,7 +42,7 @@
           link__hover-effect--black
           ">Projects</a>
         </li>
-        <li class="nav__link">
+        <li class="nav__link" onclick="toggleModal()">
           <a href="#" class="
           nav__link--anchor
           link__hover-effect
@@ -55,7 +66,7 @@
     I'm a <b class="blue">Frontend Software Engineer</b> with a strong passion for building web applications that provide fantastic user
     experiences.
     <br>
-  Here is a bit <b class="blue">about me</b>.
+  Here is a bit more<b class="blue click" onclick="toggleModal()"> about me</b>.
 </p>
 <div class="social__list">
   <a href="#" class="social__link click">
@@ -70,7 +81,7 @@
 </div>
 </div>
     </header>
-    <button class="mail__btn click">
+    <button class="mail__btn click" onclick="toggleModal()">
       <i class="fa-solid fa-envelope"></i>
     </button>
     <a href="#projects" class="scroll">
@@ -105,9 +116,10 @@
           </div>
         </div>        
         <div class="modal__half modal__contact">
+          <i class="fa-solid fa-times modal__exit click" onclick="toggleModal()"></i> 
           <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
           <h4 class="modal__sub-title modal__sub-title--contact">I am currently open to new opportunities, and would love to hear from you.</h4>
-          <form id="contact_form" action="">
+          <form id="contact_form" onsubmit="contact(event)">
             <div class="form__item">
               <label class="form__item--label">Name</label>
               <input class="input" name="user_name" type="text" required></input>
@@ -130,8 +142,7 @@
           <div class="modal__overlay modal__overlay--success">
             Thanks for the message! I look forward to speaking with you soon.
           </div>
-        </div>
-        <i class="fa-solid fa-times modal__exit click"></i>      
+        </div>             
       </div>
   </section>
   <section id="projects">
